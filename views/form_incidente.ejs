@@ -1,0 +1,47 @@
+<%- include('includes/header.ejs') %>
+<%- include('includes/navbar.ejs') %>
+	<%- include('includes/container.ejs') %>
+	   <h1>Registrar Incidente</h1>
+        
+        <br>
+        <br>
+
+        <form action="incidentes" method="POST">
+            <div class="form-row">
+            <div class="form-group col-md-12">
+                    <label for="Tipo">Tipo de incidente</label>
+                    <select class="form-control" name="tipoIncidente">
+                    <option value="Falla eléctrica">Falla eléctrica</option>
+                    <option value="Fuga de herbívoro">Falla eléctrica</option>
+                    <option value="Fuga de Velociraptors">Fuga de Velociraptors</option>
+                    <option value="Fuga de TRex">Fuga de TRex</option>
+                    <option value="Robo de ADN">Robo de ADN</option>
+                    <option value="Auto descompuesto">Auto descompuesto</option>
+                    <option value="Visitantes en zona no autorizada">Visitantes en zona no autorizada</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="Lugar">Lugar del incidente</label>
+                    <select class="form-control" name="lugarIncidente">
+                    <option value="Centro turístico">Centro turístico</option>
+                    <option value="Laboratorios">Laboratorios</option>
+                    <option value="Restaurante">Restaurante</option>
+                    <option value="Centro operativo">Centro operativo</option>
+                    <option value="Triceratops">Triceratops</option>
+                    <option value="Dilofosaurios">Dilofosaurios</option>
+                    <option value="Velociraptors">Velociraptors</option>
+                    <option value="TRex">TRex</option>
+                    <option value="Planicie de los herbívoros">Planicie de los herbívoros</option>
+                    </select>
+            </div>
+            <br>
+            <br>
+            <div class="form-group col-md-3">
+            <input type="submit" name="enviar"  class="btn btn-primary" value="Registrar">
+            
+            </div>
+        </form>
+
+
+	<%- include('includes/endcontainer.ejs') %>
+<%- include('includes/footer.ejs') %>

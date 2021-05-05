@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const rutasRoot = require('./routes/root');
+const rutasIncidentes = require('./routes/incidentes');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
@@ -20,10 +21,10 @@ app.use(session({
 const multer = require('multer');
 
 const path = require('path');
-const csrf = require('csurf');
+/*const csrf = require('csurf');
 const csrfProtection = csrf();
 
-const csrfMiddleware = require('./util/csrf');
+const csrfMiddleware = require('./util/csrf');*/
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
@@ -35,11 +36,11 @@ app.use((request, response, next) => {
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
 
-app.use(csrfProtection); 
-app.use(csrfMiddleware);
+//app.use(csrfProtection); 
+//app.use(csrfMiddleware);
 
-//app.use('/especies', rutasEspecies);
 
+app.use('/incidentes', rutasIncidentes);
 
 
 app.use('/',rutasRoot);
