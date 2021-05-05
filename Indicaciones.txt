@@ -1,0 +1,1 @@
+En sql esta el script para la base de datos exp2
