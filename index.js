@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-//const rutasRoot = require('./routes/root');
+const rutasRoot = require('./routes/root');
 
 
 app.use(bodyParser.urlencoded({extended: false}));

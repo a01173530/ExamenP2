@@ -5,10 +5,10 @@ const especiesController = require('../controllers/root_controller');
 const isAuth = require('../util/is-auth');
 
 
-router.get('/',   isAuth, especiesController.get);
+//router.get('/',   isAuth, especiesController.get);
 
 
-//router.get('/',  /* isAuth,*/ especiesController.get);
+router.get('/',  /* isAuth,*/ especiesController.get);
 
 
 
