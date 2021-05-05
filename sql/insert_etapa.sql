@@ -1,1 +1,0 @@
-INSERT INTO `etapa` (`etapaID`, `nombreEtapa`) VALUES (NULL, 'Lote Semillas'), (NULL, 'Lote Plántulas'), (NULL, 'Plantas'), (NULL, 'Planta Madre');

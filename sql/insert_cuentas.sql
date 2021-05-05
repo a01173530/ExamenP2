@@ -1,1 +1,0 @@
-INSERT INTO `cuentas` (`cuentaID`, `nombre`, `contraseña`) VALUES (NULL, 'MaChargoy', 'fA2021'), (NULL, 'Alexander', 'fA2021'), (NULL, 'Adrián Torres Hernández', 'UMA2021DAW');
