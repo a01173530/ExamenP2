@@ -3,16 +3,7 @@ CREATE DATABASE exp2;
 USE exp2;
 
 
-CREATE TABLE Incidente
-(
-	incidenteId int NOT NULL UNIQUE AUTO_INCREMENT,
-	lugarincidenteId int NOT NULL,
-	tipoincidenteId int NOT NULL,
-	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (incidenteId,lugarincidenteId,tipoincidenteId),
-	FOREIGN KEY (lugarincidenteId) REFERENCES lugar_incidente (lugarincidenteId) ON DELETE CASCADE,
-	FOREIGN KEY (tipoincidenteId) REFERENCES tipo_incidente (tipoincidenteId) ON DELETE CASCADE
-);
+
 
 CREATE TABLE tipo_incidente
 (
@@ -29,6 +20,17 @@ CREATE TABLE lugar_incidente
 	PRIMARY KEY (lugarincidenteId)
 );
 
+
+CREATE TABLE Incidente
+(
+	incidenteId int NOT NULL UNIQUE AUTO_INCREMENT,
+	lugarincidenteId int NOT NULL,
+	tipoincidenteId int NOT NULL,
+	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (incidenteId,lugarincidenteId,tipoincidenteId),
+	FOREIGN KEY (lugarincidenteId) REFERENCES lugar_incidente (lugarincidenteId) ON DELETE CASCADE,
+	FOREIGN KEY (tipoincidenteId) REFERENCES tipo_incidente (tipoincidenteId) ON DELETE CASCADE
+);
 
 
 
