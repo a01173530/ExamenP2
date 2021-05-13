@@ -1,9 +1,25 @@
 
 const Incidente = require('../models/incidente');
+const Lugar_incidente = require('../models/lugar_incidente');
+const Tipo_incidente = require('../models/tipo_incidente');
+
 
 exports.getNuevaIncidente=(request, response, next) => {
-
-	response.render('form_incidente');
+    Lugar_incidente.fetchAll()
+    .then(([lugares, fieldData]) => {
+        Tipo_incidente.fetchAll()
+        .then(([incidentes, fieldData]) => {
+            response.render('form_incidente',{
+                lugares:lugares , incidentes:incidentes
+            });
+        }).catch(err => {
+            console.log(err);
+        });
+       
+        
+    }).catch(err => {
+        console.log(err);
+    });
 
 }
 
