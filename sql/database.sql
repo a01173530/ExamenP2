@@ -9,7 +9,7 @@ CREATE TABLE Incidente
 	lugarincidenteId int NOT NULL,
 	tipoincidenteId int NOT NULL,
 	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (incidenteId,lugarincidenteId,tipoincidenteId)
+	PRIMARY KEY (incidenteId,lugarincidenteId,tipoincidenteId),
 	FOREIGN KEY (lugarincidenteId) REFERENCES lugar_incidente (lugarincidenteId) ON DELETE CASCADE,
 	FOREIGN KEY (tipoincidenteId) REFERENCES tipo_incidente (tipoincidenteId) ON DELETE CASCADE
 );
